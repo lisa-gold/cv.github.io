@@ -1,29 +1,19 @@
 let burger = document.querySelector('.xs');
-let container = document.querySelector('.container')
+let navigation = document.querySelector('.navigation');
 
-function createNavigation() {
-    let div = document.createElement('div');
-    div.className = 'navigation';
-    createList(div);
-    div.style.position = 'fixed';
-    div.style.top = '0';
-    div.style.left = '0';
-    div.style.height = '100vh';
-    div.style.width = '85%';
-    div.style.padding = '20% 5%';
-    div.style.verticalAlign = 'center';
-    div.style.background = 'linear-gradient(90deg,var(--blue),var(--green))';
-    container.append(div);
+function popNavigation(nav) {
+    nav.classList.toggle('navigation');
+    nav.style.position = 'fixed';
+    nav.style.top = '0';
+    nav.style.left = '0';
+    nav.style.height = '100vh';
+    nav.style.width = '100%';
+    nav.style.padding = '20% 5%';
+    nav.style.verticalAlign = 'center';
+    nav.style.background = 'linear-gradient(90deg,var(--blue),var(--green))';
 }
 
-burger.addEventListener('click', () => createNavigation());
-//ToDo animation
-//ToDo toggle
-//ToDo hide number by click
-//ToDO pdf download
-
 function createList(div) {
-    div.classList.toggle('display-none');
     let list = document.createElement('ul');
     let arrayOfBullets = ['About me', 'Skills', 'Work experience', 'Education', 'Relevant courses', 'My interests', 'Contacts'];
     let arrayOfLinks = ['#info', '#skills', '#experience', '#education', '#additional-education', '#interests', '#contacts'];
@@ -36,7 +26,14 @@ function createList(div) {
         bullet.append(link)
         list.append(bullet);
         bullet.addEventListener('click', () => {
-            div.style.display = 'none';
+            div.classList.toggle('navigation');
         })
         div.append(list)
 }}
+
+createList(navigation);
+burger.addEventListener('click', () => popNavigation(navigation));
+//ToDo animation
+//ToDo hide number by click
+//ToDO pdf download
+//ToDO contacts by click

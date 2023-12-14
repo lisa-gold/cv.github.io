@@ -33,28 +33,13 @@ body {
     margin: 0;
 }
 
-.container {
-
-}
-
 .xs {
     display: none;
-    z-index: 10;
-}
-
-.xs .burger {
-    background-color: #c9c7d4;
-    height: 2px;
-    width: 12px;
-    border-radius: 30px;
-}
-
-.xs:hover {
-    cursor: pointer;
 }
 
 .navigation {
-    display: block;
+    display: none;
+    z-index: 10;
 }
 
 .display-none {
@@ -125,8 +110,9 @@ header {
     font-size: 20px;
 }
 
-.contacts {
-
+.contacts{
+    position: relative;
+    z-index: -1;
 }
 
 .contacts p {
@@ -331,18 +317,11 @@ li li {
 
 /* MEDIA */
 
-@media screen and (max-width: 700px) {
-/*...*/
+@media screen and (max-width: 750px) {
+
     /* HEADER */
     header {
-    display: flex;
-    background: linear-gradient(
-            90deg,
-            var(--blue),
-            var(--green)
-    );
-    margin: 0;
-    padding: 10px;
+        display: flex;
     }
 
     .photo {
@@ -356,47 +335,43 @@ li li {
         flex-direction: column;
     }
 
-    /* ==LEFT== */
-    .left h4 {
-
+    /* ==CONTACTS== */
+    .contacts p {
+        display: inline-block;
+        margin: 5px;
     }
-
-    .contacts {
-        display: flex;
-    }
-
-    .contacts > p {
-
-    }
-
-    .skills {
-        display: flex;
-    }
-
-    .skill {
-        height: 25px;
-        width: 50px;
-        margin: 2px;
-        background-color: deeppink;
-    }
-
-    /* ==RIGHT== */
-    .right {
-        padding: 10px;
-        grid-area: right;
-    }
-    /*...*/
 }
 
-/* @media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) {
     .xs {
         display: flex;
         flex-direction: column;
         gap: 2px;
         position: fixed;
+        z-index: 20;
         top: 5px;
         right: 5px;
     }
 
+    .xs .burger {
+        background-color: #c9c7d4;
+        height: 4px;
+        width: 24px;
+        border-radius: 30px;
+    }
 
-} */
+    .xs:hover {
+        cursor: pointer;
+    }
+
+    #navigation a {
+        color: whitesmoke;
+        text-decoration: none;
+        list-style-type: none;
+        font-size: 34px;
+    }
+
+    #navigation li {
+        list-style-type: none;
+    }
+}
