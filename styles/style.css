@@ -1,0 +1,402 @@
+:root {
+    --dark-blue: #0016bd;
+    --blue: #0575e6;
+    --green: #01d54f
+}
+
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url("../fonts/NanumGothic-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Nanum Gothic Extra Bold', sans-serif;
+    src: url("../fonts/NanumGothic-ExtraBold.ttf");
+}
+
+html {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+* {
+    font-family: "Nanum Gothic", sans-serif;
+    color: #333;
+}
+
+h2, h3, h4 {
+    font-family: "Nanum Gothic Extra Bold", sans-serif;
+    letter-spacing: 1px;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+
+}
+
+.xs {
+    display: none;
+    z-index: 10;
+}
+
+.xs .burger {
+    background-color: #c9c7d4;
+    height: 2px;
+    width: 12px;
+    border-radius: 30px;
+}
+
+.xs:hover {
+    cursor: pointer;
+}
+
+.navigation {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+/* HEADER */
+header {
+    display: grid;
+    grid-template:
+    "photo about about about" 260px
+    / 260px auto;
+    background: linear-gradient(
+            90deg,
+            var(--blue),
+            var(--green)
+    );
+    margin: 0;
+    padding: 10px;
+}
+
+.photo {
+    grid-area: photo;
+    height: 250px;
+    width: 250px;
+    justify-self: center;
+    align-self: center;
+    background-image: url("../images/photoLisa.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+}
+
+.info {
+    grid-area: about;
+    padding-left: 10px;
+}
+
+.info > h2, .info > h3, .info > p {
+    color: whitesmoke;
+    font-size: 1.8rem;
+}
+
+.info > h3 {
+    font-size: 1.5rem;
+}
+
+.info > p {
+    font-size: 1.2rem;
+}
+
+/* MAIN */
+.main {
+    padding: 10px;
+    display: grid;
+    grid-template:
+    "left right right right" auto
+    / 260px auto;
+}
+
+/* ==LEFT== */
+.left {
+    grid-area: left;
+}
+
+.left h4 {
+    font-size: 20px;
+}
+
+.contacts {
+
+}
+
+.contacts p {
+    padding-left: 30px;
+    position: relative;
+    height: 30px;
+    font-size: 17px;
+}
+
+.contacts a {
+    text-decoration: none;
+}
+
+.contacts > a > p:hover {
+    font-weight: bold;
+}
+
+#city::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/location.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#email::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/email.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#tel::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/phone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#telegram::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/telegram.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#linkedIn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/linkedIn.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#gitHub::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/gitHub.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills h4 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.skill {
+    height: 25px;
+    width: 110px;
+    margin: 2px;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(203, 201, 214, 0.3);
+}
+
+.skill div {
+    height: 25px;
+    width: 25px;
+}
+
+.skill span {
+    padding: 4px;
+}
+
+.skill #python {
+    background-image: url("../images/python.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skill #js {
+    background-image: url("../images/js.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skill #html {
+    background-image: url("../images/html.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skill #css {
+    background-image: url("../images/css.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skill #jQuery {
+    background-image: url("../images/jQuerry.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skill #bootstrap {
+    background-image: url("../images/bootstrap.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skill #sql {
+    background-image: url("../images/sql.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* ==RIGHT== */
+.right {
+    padding: 10px;
+    grid-area: right;
+    line-height: 1.5;
+}
+
+.right h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.right h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.right p {
+    font-size: 18px;
+}
+
+#experience h3 {
+    margin-top: 10px;
+}
+
+#experience > .position {
+    font-size: 19px;
+    margin: 0;
+}
+
+
+ul {
+    padding-left: 5px;
+}
+
+li {
+    list-style-type: circle;
+    margin: 15px;
+    font-size: 18px;
+}
+
+li li {
+    list-style-type: disc;
+    margin: 15px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 700px) {
+/*...*/
+    /* HEADER */
+    header {
+    display: flex;
+    background: linear-gradient(
+            90deg,
+            var(--blue),
+            var(--green)
+    );
+    margin: 0;
+    padding: 10px;
+    }
+
+    .photo {
+        display: none;
+    }
+
+    /* MAIN */
+    .main {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ==LEFT== */
+    .left h4 {
+
+    }
+
+    .contacts {
+        display: flex;
+    }
+
+    .contacts > p {
+
+    }
+
+    .skills {
+        display: flex;
+    }
+
+    .skill {
+        height: 25px;
+        width: 50px;
+        margin: 2px;
+        background-color: deeppink;
+    }
+
+    /* ==RIGHT== */
+    .right {
+        padding: 10px;
+        grid-area: right;
+    }
+    /*...*/
+}
+
+/* @media screen and (max-width: 450px) {
+    .xs {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+    }
+
+
+} */

@@ -1,0 +1,9 @@
+# ignore directory .venv
+.venv/
+
+# ignore cash
+__pycache__
+.pytest_cache/
+
+# ignore 
+dist/
