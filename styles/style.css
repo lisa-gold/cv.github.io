@@ -39,7 +39,6 @@ body {
 
 .navigation {
     display: none;
-    z-index: 10;
 }
 
 .display-none {
@@ -110,11 +109,6 @@ header {
     font-size: 20px;
 }
 
-.contacts{
-    position: relative;
-    z-index: -1;
-}
-
 .contacts p {
     padding-left: 30px;
     position: relative;
@@ -126,7 +120,7 @@ header {
     text-decoration: none;
 }
 
-.contacts > a > p:hover {
+.contacts a:hover {
     font-weight: bold;
 }
 

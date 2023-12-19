@@ -4,6 +4,7 @@ let navigation = document.querySelector('.navigation');
 function popNavigation(nav) {
     nav.classList.toggle('navigation');
     nav.style.position = 'fixed';
+    nav.style.zIndex = '10';
     nav.style.top = '0';
     nav.style.left = '0';
     nav.style.height = '100vh';
