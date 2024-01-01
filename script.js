@@ -34,7 +34,7 @@ function createList(div) {
 
 createList(navigation);
 burger.addEventListener('click', () => popNavigation(navigation));
+
 //ToDo animation
 //ToDo hide number by click
 //ToDO pdf download
-//ToDO contacts by click
